@@ -86,11 +86,13 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
     .directive('ngcartCheckout', [function () {
         return {
             restrict: 'E',
-            controller: ('CartController', ['$rootScope', '$scope', 'ngCart', 'fulfilmentProvider', function ($rootScope, $scope, ngCart, fulfilmentProvider) {
+            controller: ('CartController', ['$rootScope', '$scope', '$location', 'ngCart', 'fulfilmentProvider', function ($rootScope, $scope,$location, ngCart,  fulfilmentProvider) {
                 $scope.ngCart = ngCart;
 
                 $scope.checkout = function () {
-                    fulfilmentProvider.setService($scope.service);
+
+                    $location.path("#/checkout");
+                    /*fulfilmentProvider.setService($scope.service);
                     fulfilmentProvider.setSettings($scope.settings);
                     fulfilmentProvider.checkout()
                         .success(function (data, status, headers, config) {
@@ -101,7 +103,7 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
                                 statusCode: status,
                                 error: data
                             });
-                        });
+                        });*/
                 }
             }]),
             scope: {

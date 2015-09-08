@@ -2,7 +2,7 @@
  * Created by rmendez on 9/7/2015.
  */
 
-app.controller('TabController', ['$scope', function ($scope) {
+app.controller('TabController', ['$scope', '$location', function ($scope,$location) {
 
     this.tab = 1;
 
@@ -14,6 +14,9 @@ app.controller('TabController', ['$scope', function ($scope) {
         return this.tab === tabName;
     };
 
+    if($location.path().indexOf('products') > 0){
+        this.setTab(2);
+    }
 }]);
 
 

@@ -11,11 +11,12 @@ app.config(function ($routeProvider) {
             templateUrl: './views/home.html'
         })
         .when('/products', {
-            controller: 'ProductsController',
-            templateUrl: './views/directives/products/products.html'
+            //controller: 'ProductsController',
+            templateUrl: './views/products.html',
         })
         .when("/checkout", {
-            templateUrl: ''
+            controller: 'CheckoutController as checkout',
+            templateUrl: '/views/checkout.html'
         })
         .otherwise({
             redirectTo: '/'

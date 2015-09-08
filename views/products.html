@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h1>Products</h1>
+
+        <p> Select from the following items the ones you want to add to your cart. Once you are ready to pay, click on
+            the Shopping Cart
+            button at the top-right corner of the screen. </p>
+
+        <p>Review your selections and if ready, click the checkout button... </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8" ng-controller="StoreController as store">
+        <!--  Products Container  -->
+        <div class="list-group">
+            <!--  Product Container  -->
+            <div class="list-group-item" ng-repeat="product in store.products">
+                <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+
+                <!-- Image Gallery  -->
+                <product-gallery></product-gallery>
+
+                <!-- Product Tabs  -->
+                <product-tabs></product-tabs>
+
+                <!-- Add to Cart Directive -->
+                <ngcart-addtocart align="right" id="{{ product.id }}" name="{{ product.name }}"
+                                  price="{{ product.price }}" quantity="1" quantity-max="30" data="item">Add to Cart
+                </ngcart-addtocart>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-2"></div>
+</div>

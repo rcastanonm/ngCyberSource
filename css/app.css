@@ -47,7 +47,49 @@ p {
 
 .bio {
     border-radius: 60%;
-    width: 260px;
-    height: 250px;
-    margin-left: 50px;
+    width: 230px;
+    height: 220px;
+    margin: auto;
+}
+
+.img-thumbnails {
+    margin: 0 auto 10px;
+    width: 225px;
+}
+ul {
+    padding: 0;
+}
+
+.img-wrap {
+    background: #f8f8f8;
+    height: 200px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    width: 200px;
+}
+
+.img-thumbnails .thumbnail {
+    background: #f8f8f8;
+    border: 0;
+    margin-right: 25px;
+    min-height: 50px;
+}
+li.small-image {
+    width: 50px;
+}
+.pull-left {
+    float: left !important;
+}
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+}
+li {
+    list-style: none;
 }

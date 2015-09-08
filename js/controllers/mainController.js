@@ -4,7 +4,7 @@
 
 app.controller("MainController", ['$scope', function ($scope) {
 
-    $scope.bio = "./img/rcastanonm.jpg";
+    $scope.bio = "./img/rcastanonm.png";
     $scope.logo = "./img/cyber-source.png";
 
 }]);

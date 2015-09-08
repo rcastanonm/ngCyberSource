@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="ngCyberSource" href="./img/favicon.ico">
+    <link rel="icon" type="image/icon" href="./img/favicon.ico">
 
-    <title>CyberSource con AngularJS</title>
+    <title>CyberSource with AngularJS</title>
 
     <!-- Bootstrap Latest compiled and minified CSS -->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
@@ -28,8 +28,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
 
-    <!-- App Main JS -->
+    <!-- App Modules JS -->
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/products.js"></script>
 
     <!-- Ng Cart JS !-->
     <script type="text/javascript" src="js/ngCart/ngCart.js"></script>
@@ -45,9 +46,11 @@
     <!-- App Controllers JS -->
     <script type="text/javascript" src="js/controllers/mainController.js"></script>
     <script type="text/javascript" src="js/controllers/tabController.js"></script>
+    <script type="text/javascript" src="js/controllers/checkoutController.js"></script>
 
     <!-- App Directives JS -->
-    <script type="text/javascript" src="views/directives/products/products.js"></script>
+
+
 
 </head>
 <body>
@@ -70,9 +73,9 @@
                 <li ng-class="{active: tabC.isSet(2)}"><a href="#/products" ng-click="tabC.setTab(2)">Products</a></li>
 
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+            <form class="navbar-form navbar-left" role="search" >
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Buscar...">
+                    <input type="text" class="form-control" placeholder="Buscar..." >
                 </div>
                 <button type="submit" class="btn btn-default">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -100,7 +103,6 @@
 
 <!-- ng-route and ng-view code -->
 <div class="container" ng-view></div>
-
 
 <div class="custom-footer">
     <div class="container">
@@ -133,25 +135,6 @@
                 <p class="footerText">© 2015 by Rolando C. Mendez</p>
             </div>
         </div>
-        <!--    <div class="col-md-2">
-                <p>
-                    <small>
-                        <img src="./img/followme.png" width="60px">
-                        Follow me <br/>
-                        &lt;!&ndash;<img src="./img/followme.png" width="30px">&ndash;&gt;
-        &lt;!&ndash;<img src="./img/followme.jpg" width="30px">&ndash;&gt;
-                </small>
-            </p>
-        </div>
-        <div class="col-md-3">
-            <p>
-                <small>
-                    <img src="./img/copyright.png" width="60px">
-                    © 2015 by Rolando C. Mendez
-                    rcastanonm@gmail.com
-                </small>
-            </p>
-        </div>-->
 
     </div>
 </div>
